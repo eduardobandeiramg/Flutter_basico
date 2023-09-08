@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Column(
+          //Tambem poderia adicionar a coluna dentro de um container e então os filhos desse container (rows)
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
