@@ -12,41 +12,33 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          floatingActionButton: FloatingActionButton.large(onPressed: (){print("apertou o botao");},
-          child: Icon(Icons.ios_share),),
-          appBar: AppBar(
-            title: Text("título"),
-          ),
-          body: Container(child: ListView(
-            children: [
-              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),
-              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),
-              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),              Container(height: 50, color: Colors.green,),
-              Container(height: 50, color: Colors.yellow,),
-
-            ],
-          ),),
-        )
-
-        );
+      appBar: AppBar(title: Text("titulo"),),
+      body: Alerta(),
+    )
+    );
   }
+}
 
+class Alerta extends StatefulWidget{
+  @override
+  AlertaEstado createState() {
+    return AlertaEstado();
+  }
+}
+
+class AlertaEstado extends State<Alerta>{
+  int n = 0;
+  @override
+  Widget build(BuildContext context){
+    return Column(
+      children: [
+        Container(
+          child: Text("O botao foi pressionado $n vezes!"),
+        ),
+        Container(child: ElevatedButton(onPressed: (){n++;}, child: Text("não aperte aqui!!")))
+      ],
+    );
+  }
 }
 ///Atalhos jmportantes:
 ///Opções para envolver elemento: clicar no elemento > option + enter (ou mudar estado da classe)
