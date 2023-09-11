@@ -36,11 +36,20 @@ class AlertaEstado extends State<Alerta>{
         Container(
           child: Text("O botao foi pressionado $n vezes!"),
         ),
-        Container(child: ElevatedButton(onPressed: (){setState(() {
-          n++;
-        });}, child: Text("não aperte aqui!!")))
-      ],
+        Container(child: ElevatedButton(onPressed: (){
+          n++;},
+
+            //Para fins de aprendizado, o setState foi removido.
+            //O que acontece neste caso?
+            //...
+            //Resposta completa no resumo.txt
+         child: Text("não aperte aqui!!")
+    )
+    ),
+    ]
     );
+
+
   }
 }
 ///Atalhos jmportantes:

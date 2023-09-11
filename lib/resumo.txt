@@ -18,3 +18,11 @@ o método setState deve ser incluído dentro da definição do estado (classe qu
 Este método serve para notificar o SO que um estado foi alterado e que o widget deve ser reconstruído para refletir essa mudança.
 Por isso, o setState deve embrulhar/abraçar o trecho de código que realiza a alteração de estado.
 O widget que será reconstruído será aquele que contém a variável que está sendo alterada.
+
+- observação: quando o setState() é retirado:
+quando o setState() não é definido, o código não será reconstruído quando a ação que promove a mudança de estado for executada.
+as variáveis são alteradas no tempo de execução, mas o programa não sabe que deve reconstruir "a tela" (o widget).
+Por isso, quando se clica em "hot reload", é possível ver o novo estado, pois agora os widgets foram reconstruídos (manualmente).
+
+
+- Hot Restart
