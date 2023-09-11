@@ -17,7 +17,8 @@ atributos e metodos pertencentes à classe state podem ser acessados na classe q
 o método setState deve ser incluído dentro da definição do estado (classe que herda de State).
 Este método serve para notificar o SO que um estado foi alterado e que o widget deve ser reconstruído para refletir essa mudança.
 Por isso, o setState deve embrulhar/abraçar o trecho de código que realiza a alteração de estado.
-O widget que será reconstruído será aquele que contém a variável que está sendo alterada.
+O widget que será reconstruído será o objeto da classe State, POR MEIO DA >>>>> CHAMADA DO MÉTODO BUILD <<<<<
+Por isso, variáveis devem ficar dentro da classe State, mas fora do método build, ou elas serão reinicializadas a cada mudança de estado.
 
 - observação: quando o setState() é retirado:
 quando o setState() não é definido, o código não será reconstruído quando a ação que promove a mudança de estado for executada.
