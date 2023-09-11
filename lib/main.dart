@@ -31,11 +31,14 @@ class AlertaEstado extends State<Alerta>{
   @override
   Widget build(BuildContext context){
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Container(
           child: Text("O botao foi pressionado $n vezes!"),
         ),
-        Container(child: ElevatedButton(onPressed: (){n++;}, child: Text("não aperte aqui!!")))
+        Container(child: ElevatedButton(onPressed: (){setState(() {
+          n++;
+        });}, child: Text("não aperte aqui!!")))
       ],
     );
   }

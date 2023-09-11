@@ -1,0 +1,20 @@
+Staful:
+
+- alterar staless para stateful:
+classes stateless podem ser alteradas para stateful ao clicar sobre stateless e então pressionar option + enter (da mesma forma que se embrulha)
+
+- o que sao classes stateful:
+classes stateful são aquelas que retornam objetos que alteram em tempo de execução.
+
+- como usar classes stateful:
+classes stateful devem sobrescrever o método createState
+metodos createState retornam objetos do tipo State, e as classes State recebem como atributo (parametrico) a classe stateful
+
+- Acesso de variaveis:
+atributos e metodos pertencentes à classe state podem ser acessados na classe que extende de State com "widget.atributo" ou "widget.metodo"
+
+- observação sobre o método "setState()" da classe State:
+o método setState deve ser incluído dentro da definição do estado (classe que herda de State).
+Este método serve para notificar o SO que um estado foi alterado e que o widget deve ser reconstruído para refletir essa mudança.
+Por isso, o setState deve embrulhar/abraçar o trecho de código que realiza a alteração de estado.
+O widget que será reconstruído será aquele que contém a variável que está sendo alterada.
