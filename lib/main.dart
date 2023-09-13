@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
       appBar: AppBar(title: Text("titulo"),),
       body: Alerta(),
-    )
+    ),
     );
   }
 }
@@ -24,10 +24,18 @@ class Alerta extends StatefulWidget{
   AlertaEstado createState() {
     return AlertaEstado();
   }
+
 }
 
 class AlertaEstado extends State<Alerta>{
   int n = 0;
+  void pressiona(){
+    n++;
+    setState(() {
+
+    });
+    print(n);
+  }
   @override
   Widget build(BuildContext context){
     return Column(
@@ -37,33 +45,14 @@ class AlertaEstado extends State<Alerta>{
           child: Text("O botao foi pressionado $n vezes!"),
         ),
         Container(child: ElevatedButton(onPressed: (){
-          n++;},
-
-            //Para fins de aprendizado, o setState foi removido.
-            //O que acontece neste caso?
-            //...
-            //Resposta completa no resumo.txt
+          pressiona();},
          child: Text("não aperte aqui!!")
     )
     ),
+        Container(height: 100 , child: LinearProgressIndicator(value: n/10),)
     ]
     );
 
 
   }
 }
-///Atalhos jmportantes:
-///Opções para envolver elemento: clicar no elemento > option + enter (ou mudar estado da classe)
-///
-///
-///Resumo:
-///
-///widgets(objetos) possuem em seus construtores parametros obrigatorios e opcionais
-///Esses parametros podem definir tanto características do widget como outros widgets que farão parte dele
-///(child ou children).
-///
-///container, row, columns, stack (containers evitam overflow)
-///scaffold
-///listview
-///padding (EdgeInsets. ...)
-///LinearProgressIndicator

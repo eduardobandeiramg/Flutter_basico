@@ -18,7 +18,15 @@ o método setState deve ser incluído dentro da definição do estado (classe qu
 Este método serve para notificar o SO que um estado foi alterado e que o widget deve ser reconstruído para refletir essa mudança.
 Por isso, o setState deve embrulhar/abraçar o trecho de código que realiza a alteração de estado.
 O widget que será reconstruído será o objeto da classe State, POR MEIO DA >>>>> CHAMADA DO MÉTODO BUILD <<<<<
-Por isso, variáveis devem ficar dentro da classe State, mas fora do método build, ou elas serão reinicializadas a cada mudança de estado.
+Entretanto, para que variáveis e métodos sejam visíveis ao método build, elas devem ficar dentro da classe que está extendendo de state
+(mas fora do método build, ou elas serão reinicializadas a cada mudança de estado.)
+Por uma questão de desempenho, é recomendado que widgets que nunca mudam fiquem dentro de uma classe stateless e apenas que mudam
+fiquem dentro de stateful
+
+O setState, mesmo exigindo um corpo de função dentro dele, pode ser chamado após a mudança do estado e com um corpo vazio
+Ele tem apenas a função de chamar o método build da classe que extende de State.
+Mas colocar a mudança de estado dentro dele é uma questão de boa prática.
+
 
 - observação: quando o setState() é retirado:
 quando o setState() não é definido, o código não será reconstruído quando a ação que promove a mudança de estado for executada.
@@ -27,3 +35,6 @@ Por isso, quando se clica em "hot reload", é possível ver o novo estado, pois 
 
 
 - Hot Restart
+
+
+- widgets que herdarão de stateful são aqueles que não apenas terão sua aparência alterada em tempo de execução, mas também as variáveis que armazena.
