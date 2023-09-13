@@ -1,0 +1,33 @@
+Organização de código em termos de assets:
+
+diretorio do projeto > diretorio "assets" > diretorio "tipo dos assets" > arquivos
+Exemplo:
+/meu_projeto/assets/images/
+
+Deve-se ir no arquivo "pubspec.yaml" e, na seção:
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+E adicionar os assets um por um para que o projeto flutter consiga acessar esses arquivos.
+Forma:
+2 espaços + "assets:"
+4 espaços + "-" + 1 espaço + "..."
+
+  assets:
+    - diretorio/diretorio/arquivo
+
+Exemplo:
+
+  assets:
+    - assets/images/exemplo.png
+    - assets/images/outro_exemplo.jpeg
+...
+//ou simplesmente:
+    - assets/images/
+    - assets/icons
+...
+
+E então: PUB GET!!

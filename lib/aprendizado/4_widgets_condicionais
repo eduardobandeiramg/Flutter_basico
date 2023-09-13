@@ -1,0 +1,18 @@
+Alguns widgets podem ser recontruídos de formas diferentes, sob avaliação inicial (condição)
+Existem várias formas de fazer isso:
+
+1- operador ternário na definição do widget do atributo nomeado
+Exemplo:
+Container(color: (condicao == 1) ? Colors.blue : Colors.red
+
+2- função que retorna tipo desejado
+Exemplo:
+Container(color: retornaCor())
+retornaCor(){
+    if (condicao == 1 ){
+        return Colors.blue;
+    }
+    else{
+        return Colors.red;
+    }
+}

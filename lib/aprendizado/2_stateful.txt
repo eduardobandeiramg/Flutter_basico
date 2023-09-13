@@ -11,10 +11,10 @@ classes stateful devem sobrescrever o método createState
 metodos createState retornam objetos do tipo State, e as classes State recebem como atributo (parametrico) a classe stateful
 
 - Acesso de variaveis:
-atributos e metodos pertencentes à classe state podem ser acessados na classe que extende de State com "widget.atributo" ou "widget.metodo"
+atributos e metodos pertencentes à classe stateful podem ser acessados na classe que extende de State com "widget.atributo" ou "widget.metodo"
 pode-se tambem colocar esses atributos e metodos dentro da classe extendendo de state
 o botão pode ficar na classe stateless? Nao. porque o metodo que o botao chamará ao ser pressionado nao será visivel a ele desta forma.
-(O método que o botão chamará, que contém o método setState(), estará na classe extendendo de state, pois é o único lugar onde o setState pode ficar. 
+(O método que o botão chamará, que contém o método setState(), estará na classe extendendo de state, pois é o único lugar onde o setState pode ficar.
 
 - observação sobre o método "setState()" da classe State:
 o método setState deve ser incluído dentro da definição do estado (classe que herda de State).
