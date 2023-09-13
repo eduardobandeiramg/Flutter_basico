@@ -23,7 +23,7 @@ class Alerta extends StatefulWidget{
   @override
   AlertaEstado createState() {
     return AlertaEstado();
-  }
+  } 
 
 }
 
@@ -49,7 +49,9 @@ class AlertaEstado extends State<Alerta>{
          child: Text("não aperte aqui!!")
     )
     ),
-        Container(height: 100 , child: LinearProgressIndicator(value: n/10),)
+        Container(height: 100 , child: LinearProgressIndicator(value: n/10),),
+        Container(width: 400 , height: 400, child:
+          Image.network("https://s1.static.brasilescola.uol.com.br/be/2020/04/girafas.jpg"),)
     ]
     );
 

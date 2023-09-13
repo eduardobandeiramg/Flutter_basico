@@ -1,0 +1,5 @@
+Existem 3 tipos de widget de imagem:
+Asset - do projeto
+Network - da internet
+File - do dispositivo
+Memory - da memoria do dispositivo

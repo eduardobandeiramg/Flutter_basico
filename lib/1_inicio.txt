@@ -1,3 +1,5 @@
+Arvore de widgets: flutter inspector na direita.
+
 Atalhos jmportantes:
 Opções para envolver elemento: clicar no elemento > option + enter (ou mudar estado da classe)
 

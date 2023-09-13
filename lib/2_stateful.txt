@@ -12,6 +12,9 @@ metodos createState retornam objetos do tipo State, e as classes State recebem c
 
 - Acesso de variaveis:
 atributos e metodos pertencentes à classe state podem ser acessados na classe que extende de State com "widget.atributo" ou "widget.metodo"
+pode-se tambem colocar esses atributos e metodos dentro da classe extendendo de state
+o botão pode ficar na classe stateless? Nao. porque o metodo que o botao chamará ao ser pressionado nao será visivel a ele desta forma.
+(O método que o botão chamará, que contém o método setState(), estará na classe extendendo de state, pois é o único lugar onde o setState pode ficar. 
 
 - observação sobre o método "setState()" da classe State:
 o método setState deve ser incluído dentro da definição do estado (classe que herda de State).
@@ -33,8 +36,10 @@ quando o setState() não é definido, o código não será reconstruído quando 
 as variáveis são alteradas no tempo de execução, mas o programa não sabe que deve reconstruir "a tela" (o widget).
 Por isso, quando se clica em "hot reload", é possível ver o novo estado, pois agora os widgets foram reconstruídos (manualmente).
 
+- hot reload:
+chama o metodo build
 
 - Hot Restart
-
+recarrega a aplicação, como se tivesse começando do zero, sem que seja necessário fechar e abrir de novo
 
 - widgets que herdarão de stateful são aqueles que não apenas terão sua aparência alterada em tempo de execução, mas também as variáveis que armazena.
